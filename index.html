@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="mai.jpg">
+  <title>Random Waifu</title>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <link rel="stylesheet" href="atropos.css">
+  <link rel="stylesheet" href="Layout.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+ <div class="blur">
+    <div class="toolbar" id="nav">
+    <div class="toolbar__left menu">
+  <span class="toolbar-button">
+      <svg id="menu" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" height="1.5em" width="1.5em"><path fill="currentColor" d="M7.5 36q-.65 0-1.075-.425Q6 35.15 6 34.5q0-.65.425-1.075Q6.85 33 7.5 33h33q.65 0 1.075.425Q42 33.85 42 34.5q0 .65-.425 1.075Q41.15 36 40.5 36Zm0-10.5q-.65 0-1.075-.425Q6 24.65 6 24q0-.65.425-1.075Q6.85 22.5 7.5 22.5h33q.65 0 1.075.425Q42 23.35 42 24q0 .65-.425 1.075-.425.425-1.075.425Zm0-10.5q-.65 0-1.075-.425Q6 14.15 6 13.5q0-.65.425-1.075Q6.85 12 7.5 12h33q.65 0 1.075.425Q42 12.85 42 13.5q0 .65-.425 1.075Q41.15 15 40.5 15Z"/></svg>
+    </span>
+</div>
+<div class="toolbar__center wm">Random Waifu</div>
+<div class="toolbar__right"><img src="mai.jpg" width="37%" alt="" class="img"></div>
+    </div>
+    <ons-fab position="bottom right" onclick="pilih()" id="randomButton" class="pilih" style="display:block;">
+    <ons-icon icon="md-plus" id="random"></ons-icon>
+      </ons-fab>
+      <ons-fab position="bottom right" onclick="gen1Clik()" id="randomButton" class="gen1" style="display:none;">
+    <ons-icon icon="md-plus" id="random"></ons-icon>
+      </ons-fab>
+      <ons-fab position="bottom right" onclick="gen2Clik()" id="randomButton" class="gen2" style="display:none;">
+    <ons-icon icon="md-plus" id="random"></ons-icon>
+      </ons-fab>
+      <a id="screenshot" href="#" download>
+      <ons-fab position="bottom left" id="save">
+        <ons-icon icon="md-save" id="but1"></ons-icon>
+</ons-fab>
+      </a>
+     <div class="bar-content">
+     <div class="sidebar" style="display:block;">
+      <ul class="list" id="list">
+        <div class="header-list">
+  <li class="list-header">
+    Random Waifu Generator<i class="bx" id="tema" style="font-size:20px;"></i>
+  </li>
+  </div>
+  <details>
+    <summary>
+      Generator 1
+    </summary>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r1" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r1" class="list-item__center">
+      Waifu
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r2" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r2" class="list-item__center">
+      Neko
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r3" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r3" class="list-item__center">
+      Shinobu
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r4" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r4" class="list-item__center">
+      Megumin
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r5" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r5" class="list-item__center">
+      Bully
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r6" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r6" class="list-item__center">
+      Cuddle
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r7" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r7" class="list-item__center">
+      Cry
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r8" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r8" class="list-item__center">
+      Hug
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r9" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r9" class="list-item__center">
+      Awoo
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r10" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r10" class="list-item__center">
+      Kiss
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r11" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r11" class="list-item__center">
+      Lick
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r12" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r12" class="list-item__center">
+      Pat
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r13" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r13" class="list-item__center">
+      Smug
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">  
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r14" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r14" class="list-item__center">
+      Bonk
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r15" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r15" class="list-item__center">
+      Yeet
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r16" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r16" class="list-item__center">
+      Blush
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r17" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r17" class="list-item__center">
+      Smile
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r18" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r18" class="list-item__center">
+      Wave
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r19" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r19" class="list-item__center">
+      Higefive
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r20" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r20" class="list-item__center">
+      Handhold
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r21" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r21" class="list-item__center">
+      Nom
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r22" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r22" class="list-item__center">
+      Bite
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r23" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r23" class="list-item__center">
+      Glomp
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r24" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r24" class="list-item__center">
+      Slap
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r25" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r25" class="list-item__center">
+      Kill
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r26" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r26" class="list-item__center">
+      Kick
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r27" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r27" class="list-item__center">
+      Happy
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r28" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r28" class="list-item__center">
+      Wink
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r29" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r29" class="list-item__center">
+      Poke
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r30" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r30" class="list-item__center">
+      Dance
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r31" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r31" class="list-item__center">
+      Cringe
+    </label>
+  </li>
+    </details>
+  <details>
+    <summary>
+      Generator 2
+    </summary>
+    <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r32" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r32" class="list-item__center">
+      Random
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r33" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+        <label for="r33" class="list-item__center">
+      Waifu
+    </label>
+    </li>
+    <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r34" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r34" class="list-item__center">
+      Marin Kitagawa
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r35" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r35" class="list-item__center">
+      Mori Calliope
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r36" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+        <label for="r36" class="list-item__center">
+      Raiden Shogun
+    </label>
+    </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r37" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r37" class="list-item__center">
+      Oppai
+    </label>
+  </li>
+  <li class="list-item list-item--tappable" style="display:none;">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r37" class="radio-button__input" name="r" checked="checked">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r37" class="list-item__center">
+      Oppai
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r38" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r38" class="list-item__center">
+      Selfie
+    </label>
+  </li>
+  <li class="list-item list-item--tappable">
+    <div class="list-item__left">
+      <label class="radio-button">
+        <input type="radio" id="r39" class="radio-button__input" name="r">
+        <div class="radio-button__checkmark"></div>
+      </label>
+    </div>
+    <label for="r39" class="list-item__center">
+      Uniform
+    </label>
+  </li>
+    </details>
+</ul>
+</div>
+<span class="toolbar-button">
+<svg id="close" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" height="1.5em" width="1.5em"><path fill="currentColor" d="M24 26.1 13.5 36.6q-.45.45-1.05.45-.6 0-1.05-.45-.45-.45-.45-1.05 0-.6.45-1.05L21.9 24 11.4 13.5q-.45-.45-.45-1.05 0-.6.45-1.05.45-.45 1.05-.45.6 0 1.05.45L24 21.9l10.5-10.5q.45-.45 1.05-.45.6 0 1.05.45.45.45.45 1.05 0 .6-.45 1.05L26.1 24l10.5 10.5q.45.45.45 1.05 0 .6-.45 1.05-.45.45-1.05.45-.6 0-1.05-.45Z"/></svg>
+</span>
+</div>
+     <div id="hasil">
+      <div class="dimensi">
+       <div class="atropos my-atropos">
+  <div class="atropos-scale">
+    <div class="atropos-rotate">
+      <div class="atropos-inner">
+           <img id="url" src="ngapain sih?" alt="Random Waifu Download" data-atropos-offset="-5">
+      </div>
+    </div>
+  </div>
+</div>
+    <h5 id="author">Author: <span id="gMendukung">Author Tidak Mendukung Untuk Generator Ini!</span><span id="authorName"></span></h5>
+</div>
+<svg class="progress-circular progress-circular--material progress-circular--indeterminate" id="loading" style="display:none;
+color:aqua;">
+  <circle class="progress-circular__background progress-circular--material__background"/>
+  <circle class="progress-circular__primary progress-circular--material__primary progress-circular--indeterminate__primary"/>
+  <circle class="progress-circular__secondary progress-circular--material__secondary progress-circular--indeterminate__secondary"/>
+</svg>
+    <div id="welcome">
+     <h1 class="center isi">Selamat Datang Di <span>Random Waifu</span></h1>
+     <p class="center isi" style="font-weight:500;">Tempat Dimana Kalian Bisa Mencari Waifu Yang Cantik-Cantik Dengan Random</p>
+     <audio src="Ohayou.mp3" id="pagi" type="audio/mp3"></audio>
+     <audio src="Konichiwa.mp3" id="siang" type="audio/mp3"></audio>
+     <audio src="Konbanwa.mp3" id="malem" type="audio/mp3"></audio>
+     </div>
+     </div>
+     </div>
+     <div class="toast toast--material" id="toast">
+  <div class="toast__message toast-material-massage">Harap Pilih Generator Terlebih Dahulu!</div>
+</div>
+     <script src="atropos.min.js"></script>
+  <script src="Logic.js"></script>
+</body>
+</html>
